@@ -10,13 +10,16 @@ $templateName = '';
 
 if ($page == 'projets') {
     $templateName = 'projets';
+    $activePage = 'projets';
 }
 else if ($page == 'experience') {
     $templateName = 'experience';
+    $activePage = 'experience';
 }
 else if ($page == 'presentation') {
 
     $templateName = 'presentation';
+    $activePage = 'presentation';
 }
 else {
     $templateName = '404';
