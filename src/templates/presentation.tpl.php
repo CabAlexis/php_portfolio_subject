@@ -1,3 +1,4 @@
-<h1>
-    Bonjour à vous !
-</h1>
+<main role="main" class="inner cover">
+        <h1 class="cover-heading">Présentation</h1>
+        <p class="lead">Coucou c'est moi</p>
+      </main>

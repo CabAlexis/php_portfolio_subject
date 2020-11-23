@@ -16,18 +16,13 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
     integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
-  <!-- Ma feuille de style pour mon blog -->
-  <link rel="stylesheet" href="./css/blog.css">
+  <link rel="stylesheet" href="assets/css/nav.style.css">
+
 
   <title>Portfolio Php Training</title>
 </head>
 
-<body>
+<body class="text-center">
+<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
 
-  <!-- HEADER -->
-  <header>
-    <!-- NAV -->
-<nav>
     <?php require __DIR__.'/../templates/nav.tpl.php'; ?>
-</nav>
-  </header>
