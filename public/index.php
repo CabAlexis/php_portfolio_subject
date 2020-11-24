@@ -53,6 +53,14 @@ $sql = '
 $result = $pdoDBConnexion->query($sql);
 $formationsList  = $result->fetchAll(PDO::FETCH_ASSOC);
 
+/* UTILISATEUR */
+
+$sql = '
+    SELECT * from user
+';
+$result = $pdoDBConnexion->query($sql);
+$user = $result->fetchAll(PDO::FETCH_ASSOC);
+
 require __DIR__ . '/../src/templates/header.tpl.php';
 require __DIR__ . '/../src/templates/' . $templateName . '.tpl.php';
 require __DIR__ . '/../src/templates/footer.tpl.php';

@@ -38,7 +38,7 @@ a:hover {
  * Présentation
  */
 .photo {
-  width: 8rem;
+  width: 10rem;
   float: left;
   margin: 2rem;
 }
@@ -55,7 +55,6 @@ a:hover {
   text-align: justify;
   padding-top: 1rem;
   display: flex;
-  align-items: center;
 }
 .leftbox>div{
   margin: 0.5rem;
