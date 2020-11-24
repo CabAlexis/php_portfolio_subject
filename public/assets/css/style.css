@@ -41,6 +41,7 @@ a:hover {
   width: 10rem;
   float: left;
   margin: 2rem;
+  margin-bottom: 9rem;
 }
 .forma{
   display: flex;
@@ -62,6 +63,7 @@ a:hover {
 .title{
   font-size: 2rem;
   border-top: solid white;
+  padding-top: 1rem;
 }
 .small-title {
   font-weight: bold;
