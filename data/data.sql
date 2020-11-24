@@ -48,7 +48,12 @@ CREATE TABLE `EXPERIENCES` (
 
 LOCK TABLES `EXPERIENCES` WRITE;
 /*!40000 ALTER TABLE `EXPERIENCES` DISABLE KEYS */;
-INSERT INTO `EXPERIENCES` (`ID`, `USER_ID`, `TITLE`, `COMPANY`, `DESCRIPTION`, `START_DATE`, `END_DATE`) VALUES (1,1,'CTO','La Fabrik du Numé','Lorem ipsum dolor sit amet','2020-11-01',NULL);
+INSERT INTO `EXPERIENCES` (`ID`, `USER_ID`, `TITLE`, `COMPANY`, `DESCRIPTION`, `START_DATE`, `END_DATE`) VALUES (1,1,'Développeur Symfony','Stage-Oclock','Réalisation d''un site internet pendant 1 mois, avec une équipe de 5 personnes.
+-Mise en place d''une API Rest
+-Méthode AGILE
+-Git, AWS
+Ce projet remplit les compétences exigées pour le diplôme de Développeur Web et
+Web mobile.','2020-11-01',NULL);
 /*!40000 ALTER TABLE `EXPERIENCES` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -62,9 +67,9 @@ DROP TABLE IF EXISTS `FORMATIONS`;
 CREATE TABLE `FORMATIONS` (
   `ID` int NOT NULL AUTO_INCREMENT,
   `USER_ID` int NOT NULL,
-  `TITLE` varchar(20) NOT NULL,
-  `SCHOOL` varchar(20) NOT NULL,
-  `GRADUATE` varchar(20) DEFAULT NULL,
+  `TITLE` varchar(50) NOT NULL,
+  `SCHOOL` varchar(50) NOT NULL,
+  `GRADUATE` varchar(50) DEFAULT NULL,
   `START_DATE` date NOT NULL,
   `END_DATE` date DEFAULT NULL,
   `DESCRIPTION` longtext,
@@ -80,7 +85,11 @@ CREATE TABLE `FORMATIONS` (
 
 LOCK TABLES `FORMATIONS` WRITE;
 /*!40000 ALTER TABLE `FORMATIONS` DISABLE KEYS */;
-INSERT INTO `FORMATIONS` (`ID`, `USER_ID`, `TITLE`, `SCHOOL`, `GRADUATE`, `START_DATE`, `END_DATE`, `DESCRIPTION`) VALUES (1,1,'Expert Coding Class','CondingLifeSchool','LifeSchool Degree','2016-09-01','2018-06-30','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consequat viverra enim, in blandit dui congue id. Cras viverra maximus fermentum. Donec vel arcu venenatis, convallis dolor sit amet, semper tortor. Phasellus varius urna in tortor aliquam, in tempor mauris maximus. Phasellus ac nibh at ante vestibulum dictum. Duis nibh mi, porttitor eu mi nec, dignissim interdum velit. Nulla tortor turpis, finibus ut viverra quis, faucibus vitae massa. Aliquam id nunc imperdiet, varius mi id, ultricies leo. Nullam pretium orci quis arcu blandit, id tincidunt sem laoreet. Nullam mattis vehicula sem. Ut mattis porttitor nunc et sagittis. Nullam vitae eros augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.');
+INSERT INTO `FORMATIONS` (`ID`, `USER_ID`, `TITLE`, `SCHOOL`, `GRADUATE`, `START_DATE`, `END_DATE`, `DESCRIPTION`) VALUES (1,1,'Développeur web Symfony','OClock','Développeur web et web mobile','2020-04-18','2020-09-18','Socle de compétences :
+Front End : HTML, CSS, Bootstrap, Javascript, Wordpress, Prestashop
+Back End : PHP, programmation orientée objets, méthode MVC, SQL, APIs, Lumen
+Outils : Git, Github, trello, SCRUM et méthode Agile
+Spécialisation Symfony');
 /*!40000 ALTER TABLE `FORMATIONS` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -110,7 +119,19 @@ CREATE TABLE `PORTFOLIO` (
 
 LOCK TABLES `PORTFOLIO` WRITE;
 /*!40000 ALTER TABLE `PORTFOLIO` DISABLE KEYS */;
-INSERT INTO `PORTFOLIO` (`ID`, `USER_ID`, `TITLE`, `CREATION_DATE`, `DESCRIPTION`, `URL`) VALUES (1,1,'COVID19 - Attestation','2020-04-01','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consequat viverra enim, in blandit dui congue id. Cras viverra maximus fermentum. Donec vel arcu venenatis, convallis dolor sit amet, semper tortor. Phasellus varius urna in tortor aliquam, in tempor mauris maximus. Phasellus ac nibh at ante vestibulum dictum. Duis nibh mi, porttitor eu mi nec, dignissim interdum velit. Nulla tortor turpis, finibus ut viverra quis, faucibus vitae massa. Aliquam id nunc imperdiet, varius mi id, ultricies leo. Nullam pretium orci quis arcu blandit, id tincidunt sem laoreet. Nullam mattis vehicula sem. Ut mattis porttitor nunc et sagittis. Nullam vitae eros augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.','https://covid19-attestation.stoodent.fr/');
+INSERT INTO `PORTFOLIO` (`ID`, `USER_ID`, `TITLE`, `CREATION_DATE`, `DESCRIPTION`, `URL`) VALUES (1,1,'DofusGroup','2020-01-08','DofusGroup
+Etant un grand joueur de Dofus, depuis très longtemps, j''ai voulu me lancer un projet de dev dans quelque chose qui plait.
+Ok, mais kézako?
+DofusGroup, est une idée qui m''est venue en jeu, toujours beaucoup de mal a trouver un groupe pour farm LE donjon qui m''aidera à avoir LA pano qu''il me faut !!!! :heart-eyes: Les canaux de recrutement de Dofus sont spam, et donc dure d''etre à l''affut ou meme de prendre du temps sur son temps de jeu si sacré a trouver un groupe....
+Avec DofusGroup vous pourrez créer des demandes de donjons avec plusieurs criteres : *
+Le nombre de participants, on drop ou on xp? 
+L''heure et le jour, on se connecte et on va farm, plus le temps de prendre racine au zaap !
+Les éléments et les classes souhaités, faut opti tout ca quand meme !
+Et surtout que quel donjon on part ?
+Les utilisateurs pourront également rejoindre les demandes crées, cela avertira tous les joueurs du groupe !
+Stacks?
+Pour l''instant uniquement du symfony, un projet tres ambitieux pour mes petites mains de baby dev ! Mais super interessant et enrichissant ! :heart-eyes:
+Surement du React pour le front dans un futur plus ou moins proche !','not yet');
 /*!40000 ALTER TABLE `PORTFOLIO` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -166,7 +187,12 @@ CREATE TABLE `USER` (
 
 LOCK TABLES `USER` WRITE;
 /*!40000 ALTER TABLE `USER` DISABLE KEYS */;
-INSERT INTO `USER` (`ID`, `LAST_NAME`, `USERNAME`, `FIRST_NAME`, `BIRTH_DATE`, `DESCRIPTION`) VALUES (1,'Doe','John','john.doe','1990-06-12','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consequat viverra enim, in blandit dui congue id. Cras viverra maximus fermentum. Donec vel arcu venenatis, convallis dolor sit amet, semper tortor. Phasellus varius urna in tortor aliquam, in tempor mauris maximus. Phasellus ac nibh at ante vestibulum dictum. Duis nibh mi, porttitor eu mi nec, dignissim interdum velit. Nulla tortor turpis, finibus ut viverra quis, faucibus vitae massa. Aliquam id nunc imperdiet, varius mi id, ultricies leo. Nullam pretium orci quis arcu blandit, id tincidunt sem laoreet. Nullam mattis vehicula sem. Ut mattis porttitor nunc et sagittis. Nullam vitae eros augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.');
+INSERT INTO `USER` (`ID`, `LAST_NAME`, `USERNAME`, `FIRST_NAME`, `BIRTH_DATE`, `DESCRIPTION`) VALUES (1,'Cabillic','Cabalex','Alexis','1994-11-08','Après diverses opportunités variées, j''ai choisi de changer de voie pour me rapprocher de mes centres d''intérêt. Ceux-ci étant depuis toujours liés au Web et à l''informatique, j''ai décidé de m''orienter vers le développement Web. Après quelques semaines en autodidacte afin de confirmer mon choix, j''ai commencé une formation au sein d''O''clock. Chaque jour passé depuis le début de la formation en avril 2020 me conforte dans mon orientation. Les défis sont nombreux et variés et permettent un apprentissage constant. Les différents langages, les outils présentés et jusqu''à la logique nécessaire pour s''épanouir ont su me convaincre du grand potentiel de cette voie.
+La formation est divisée en trois étapes :
+- Un socle commun permettant le renforcement des bases en HTML, CSS, Git, JavaScript, PHP,
+- Une spécialisation dans un framework, Symfony pour ma part,
+- Une "apothéose" qui consiste en un projet complet professionnalisant afin de mettre en pratique l''ensemble des acquis.
+Me voilà donc à la recherche d''opportunités dans le développement Web avec une préférence pour le back-end.');
 /*!40000 ALTER TABLE `USER` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
