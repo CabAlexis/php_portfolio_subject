@@ -8,7 +8,7 @@ try {
   $pdoDBConnexion = new PDO(
       $dataSourceName,
       $user,
-      $password,
+      $password
   );
 } catch(PDOException $exception) {
   echo 'Connexion échouée : ' . $exception->getMessage();

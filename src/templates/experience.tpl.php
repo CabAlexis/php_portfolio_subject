@@ -1,23 +1,23 @@
 <main role="main" class="inner cover">
-  <h1 class="cover-heading">Mes expériences</h1>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">Poste</th>
-        <th scope="col">Entreprise</th>
-        <th scope="col">Description</th>
-        <th scope="col">Date d'entrée</th>
-      </tr>
-    </thead>
-    <tbody>
+  <h2 class="title">Mes expériences</h2>
+  <div class="forma">
+    <div class="leftbox">
       <?php foreach ($expList as  $id =>  $exp) : ?>
-        <tr>
-          <td><?= $exp['TITLE'] ?></td>
-          <td><?= $exp['COMPANY'] ?></td>
-          <td><?= $exp['DESCRIPTION'] ?></td>
-          <td><?= $exp['START_DATE'] ?></td>
-        </tr>
-      <?php endforeach; ?>
-    </tbody>
-  </table>
+        <div>
+          <p scope="col">Poste :</p>
+          <p scope="col">Entreprise :</p>
+          <p scope="col">Date d'entrée :</p>
+        </div>
+        <div>
+          <p><?= $exp['TITLE'] ?></p>
+          <p><?= $exp['COMPANY'] ?></p>
+          <p><?= $exp['START_DATE'] ?></p>
+        </div>
+    </div>
+    <div class="rightbox">
+      <p class="small-title">Description :</p>
+      <p><?= $exp['DESCRIPTION'] ?></p>
+    </div>
+  </div>
+<?php endforeach; ?>
 </main>
