@@ -1,23 +1,23 @@
 <main role="main" class="inner cover">
-  <h1 class="cover-heading">Mes projets</h1>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">Titre</th>
-        <th scope="col">Date de créaion</th>
-        <th scope="col">Description</th>
-        <th scope="col">URL</th>
-      </tr>
-    </thead>
-    <tbody>
+  <h2 class="title">Mes projets</h2>
+  <div class="forma">
+    <div class="leftbox">
       <?php foreach ($projetsList as  $id =>  $proj) : ?>
-        <tr>
-          <td><?= $proj['TITLE'] ?></td>
-          <td><?= $proj['CREATION_DATE'] ?></td>
-          <td><?= $proj['DESCRIPTION'] ?></td>
-          <td><?= $proj['URL'] ?></td>
-        </tr>
-      <?php endforeach; ?>
-    </tbody>
-  </table>
+        <div>
+          <p scope="col">Titre :</p>
+          <p scope="col">Date de créaion :</p>
+          <p scope="col">URL :</p>
+        </div>
+        <div>
+          <p><?= $proj['TITLE'] ?></p>
+          <p><?= $proj['CREATION_DATE'] ?></p>
+          <p><?= $proj['URL'] ?></p>
+        </div>
+    </div>
+    <div class="rightbox">
+      <p class="small-title">Description :</p>
+      <p><?= $proj['DESCRIPTION'] ?></p>
+    <?php endforeach; ?>
+    </div>
+  </div>
 </main>
